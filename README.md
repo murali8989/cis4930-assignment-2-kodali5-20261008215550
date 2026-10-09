@@ -9,3 +9,17 @@ The application listens on port 8000 and returns a text response when accessed o
 ## Verification
 
 The running application should be verified using an HTTP request to port 8000.
+
+
+## Usage
+
+Build command:
+
+    docker build -t git-docker-app:test .
+
+Run and verify commands:
+
+    docker run -d --name app-test -p 8080:8000 git-docker-app:test
+    curl http://localhost:8080
+
+The expected response includes Status: healthy - kodali5.
